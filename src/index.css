@@ -1,68 +1,135 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+/* --------------------------------------------------
+   0. Tiny reset
+--------------------------------------------------*/
+*, *::before, *::after {
+  box-sizing: border-box;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* --------------------------------------------------
+   1. Page‑level layout
+--------------------------------------------------*/
+html, #root { height: 100%; }
+body {
+  min-height: 100svh;                    /* dynamic vh fixes iOS Safari bar     */
+  display: grid;
+  place-items: center;                   /* centers both axes                   */
+  padding: 1.5rem;
+
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+  color: #1f2937;
+
+  background:
+    radial-gradient(circle at 20% 0%, #ffe5f1 0%, #fff 45%, #fff 100%);
+}
+
+/* --------------------------------------------------
+   2. Brand palette (CSS variables)
+--------------------------------------------------*/
+:root {
+  --pink-700: #d9206c;
+  --pink-600: #e7337d;
+  --pink-500: #ff4d97;
+  --pink-200: #ffc8df;
+  --grey-800: #374151;
+  --grey-300: #d1d5db;
+  --grey-100: #f3f4f6;
+  --surface:  #ffffff;
+}
+
+/* --------------------------------------------------
+   3. Card wrapper
+--------------------------------------------------*/
+.card {
+  width: clamp(320px, 88vw, 420px);
+  background: var(--surface);
+  border-radius: 1.25rem;
+  padding: 2.75rem 2.25rem;
+  box-shadow:
+    0 6px 24px rgb(0 0 0 / 0.06),
+    0 2px 6px  rgb(0 0 0 / 0.1);
+}
+
+/* --------------------------------------------------
+   4. Typography
+--------------------------------------------------*/
+.card h1 {
+  font-size: clamp(1.9rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--pink-700);
+  text-align: center;
+  margin-bottom: .25em;
+}
+.card h2 {
+  font-size: clamp(1.15rem, 3vw, 1.45rem);
+  font-weight: 600;
+  color: var(--grey-800);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* --------------------------------------------------
+   5. Modern form controls
+--------------------------------------------------*/
+.input-field {
+  width: 100%;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--grey-300);
+  border-radius: 0.95rem;
+  background: var(--grey-100);
+
+  font-size: 1rem;
+  appearance: none;                      /* kills browser‑specific quirks       */
+  transition:
+    border-color .18s ease,
+    background   .18s ease,
+    box-shadow   .18s ease;
+  margin-bottom: 1.25rem;
+}
+
+.input-field::placeholder {
+  color: var(--grey-800);
+  opacity: .55;
+}
+
+.input-field:focus {
+  outline: none;
+  background: var(--surface);
+  border-color: var(--pink-500);
+  box-shadow: 0 0 0 4px rgb(255 77 151 / .30);
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  width: 100%;
+  padding: 1rem 1.15rem;
+  background: var(--pink-600);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.95rem;
+  font-size: 1rem;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background .15s ease, transform .1s ease;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+button:hover   { background: var(--pink-700); }
+button:active  { transform: translateY(1px); }
+button:disabled{
+  background: var(--pink-200);
+  cursor: not-allowed;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* --------------------------------------------------
+   6. Status messages
+--------------------------------------------------*/
+.alert-success,
+.alert-error {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 1rem;
+  font-size: .95rem;
 }
+.alert-success { color: var(--pink-600); }
+.alert-error   { color: #e11d48; }      /* rose‑700 */
