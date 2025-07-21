@@ -73,7 +73,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
   background: radial-gradient(circle at 20% 0%, rgba(255, 77, 151, 0.1) 0%, rgba(0, 0, 0, 0) 45%);
   position: relative;
 }
@@ -224,12 +224,21 @@ section {
   margin-bottom: 1rem;
 }
 
-.team-member .bio {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.8;
-  max-width: 350px;
-  margin: 0 auto;
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.social-link {
+  color: var(--pink-500);
+  transition: all 0.2s ease;
+  padding: 0.5rem;
+}
+
+.social-link:hover {
+  color: var(--pink-600);
+  transform: translateY(-2px);
 }
 
 .waitlist-section {

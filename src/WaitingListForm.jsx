@@ -48,7 +48,7 @@ export default function WaitingListForm() {
         className="input-field"
         type="tel"
         name="phone"
-        placeholder="Phone number"
+        placeholder="Phone number (optional)"
         pattern="^\+?[0-9\s\-()]{7,}$"   /* basic validation */
         title="Enter a valid phone number"
         value={form.phone}
