@@ -14,8 +14,8 @@ export default function App() {
       </header>
       <section className="hero">
         <div className="hero-content">
-          <h1>Invest Your Spare Change in Crypto</h1>
-          <h2>The smartest way to start your crypto journey, one small step at a time 🐷</h2>
+          <h1>The future of crypto is almost here. Are you in?</h1>
+          <h2>We're rounding up your spare change and auto-investing it into crypto. No stress. No spreadsheets. No finance-bro jargon. <br></br>Just limitless growth with every transaction.</h2>
           <div className="cta-buttons">
             <button className="button primary" onClick={() => document.getElementById('waitlist').scrollIntoView({ behavior: 'smooth' })}>
               Join Waitlist
@@ -28,14 +28,11 @@ export default function App() {
       </section>
 
       <section className="about">
-        <h2>What is Oink?</h2>
-        <p>
-          <strong>Oink</strong> is a revolutionary platform that makes <strong>crypto investing accessible to everyone</strong>.
-          We <strong>round up your everyday purchases</strong> and automatically invest the <strong>spare change</strong> into
-          your chosen cryptocurrencies. <strong>Start building your crypto portfolio</strong> without changing your daily habits.
-        </p>
-        <br />
-        <h3>Oink connects your everyday spending to the world of crypto.</h3>
+        <h2>Be the first to experience Oink</h2>
+        <p>Join our growing waitlist for Oink Beta.</p>
+        <div className="quote-block">
+          "Crypto investing was something I was always interested in. But the space is pretty intimidating. And the options were crazy. Oink lowers those barriers to entry. Crypto for all!"
+        </div>
       </section>
 
       <section className="team">
@@ -72,6 +69,16 @@ export default function App() {
         <h2>Join the Waitlist</h2>
         <WaitingListForm />
       </section>
+
+      <footer className="site-footer">
+        <div className="footer-content">
+          <div className="footer-logo">
+            <img src="/oink_pig_logo_correct_pink.jpeg" alt="Oink logo" className="footer-logo-img" />
+            <span>Oink</span>
+          </div>
+          <p className="footer-copyright">© {new Date().getFullYear()} Oink. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 }
