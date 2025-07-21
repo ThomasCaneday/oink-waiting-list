@@ -53,7 +53,6 @@ export default function WaitingListForm() {
         title="Enter a valid phone number"
         value={form.phone}
         onChange={handleChange}
-        required
       />
 
       <button disabled={status === "loading"}>
