@@ -2,8 +2,8 @@ import { useState } from "react";
 import { addSignup } from "./firebase";
 
 export default function WaitingListForm() {
-  const [form, setForm] = useState({ name: "", email: "" });
-  const [status, setStatus] = useState("idle");   // idle | loading | done | error
+  const [form, setForm] = useState({ name: "", email: "", phone: "" });
+  const [status, setStatus] = useState("idle");
 
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -14,54 +14,54 @@ export default function WaitingListForm() {
     try {
       await addSignup(form);
       setStatus("done");
-      setForm({ name: "", email: "" });
-    } catch (err) {
-      console.error(err);
+      setForm({ name: "", email: "", phone: "" });
+    } catch {
       setStatus("error");
     }
   };
 
   return (
-    <section className="w-full max-w-md mx-auto p-6">
-      {/* <h1 className="text-2xl font-bold mb-4 text-center">
-        Join the Waiting List
-      </h1> */}
+    <form onSubmit={handleSubmit}>
+      {/* name */}
+      <input
+        className="input-field"
+        name="name"
+        placeholder="Your name"
+        value={form.name}
+        onChange={handleChange}
+        required
+      />
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-        <input
-          className="input-field"
-          name="name"
-          placeholder="Your name"
-          value={form.name}
-          onChange={handleChange}
-          required
-        />
-        <input
-          className="input-field"
-          type="email"
-          name="email"
-          placeholder="Email address"
-          value={form.email}
-          onChange={handleChange}
-          required
-        />
-        <button
-          type="submit"
-          disabled={status === "loading"}
-          className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded"
-        >
-          {status === "loading" ? "Submitting…" : "Get Early Access"}
-        </button>
+      {/* email */}
+      <input
+        className="input-field"
+        type="email"
+        name="email"
+        placeholder="Email address"
+        value={form.email}
+        onChange={handleChange}
+        required
+      />
 
-        {status === "done" && (
-          <p className="text-green-600 text-center">🎉 You're on the list!</p>
-        )}
-        {status === "error" && (
-          <p className="text-red-600 text-center">
-            Something went wrong. Try again?
-          </p>
-        )}
-      </form>
-    </section>
+      {/* phone */}
+      <input
+        className="input-field"
+        type="tel"
+        name="phone"
+        placeholder="Phone number"
+        pattern="^\+?[0-9\s\-()]{7,}$"   /* basic validation */
+        title="Enter a valid phone number"
+        value={form.phone}
+        onChange={handleChange}
+        required
+      />
+
+      <button disabled={status === "loading"}>
+        {status === "loading" ? "Submitting…" : "Get Early Access"}
+      </button>
+
+      {status === "done"  && <p className="alert-success">🎉 You're on the list!</p>}
+      {status === "error" && <p className="alert-error">Something went wrong.</p>}
+    </form>
   );
 }
