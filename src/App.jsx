@@ -1,6 +1,13 @@
 import WaitingListForm from "./WaitingListForm";
 import "./index.css"; // must stay
 
+// LinkedIn Icon SVG component
+const LinkedInIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+  </svg>
+);
+
 export default function App() {
   return (
     <div className="landing-page">
@@ -35,32 +42,38 @@ export default function App() {
         </div>
       </section>
 
-      <section className="team">
+            <section className="team">
         <h2>Meet Our Team</h2>
         <div className="team-grid">
           <div className="team-member">
             <img src="/zevin-headshot.jpeg" alt="Zevin Attisha" className="team-photo" />
             <h3>Zevin Attisha</h3>
             <p className="role">CEO</p>
-            <p className="bio">
-              Zevin Attisha is the Chief Executive Officer of Oink, where he leads the company’s strategic direction, vision, and growth initiatives. A Presidential Scholar and Division I student-athlete at the University of San Diego, Zevin brings a disciplined and entrepreneurial mindset shaped by both academic excellence and real-world business experience. As an Acquisition Analyst for his family’s investment fund, he has gained deep exposure to financial modeling, deal evaluation, and capital allocation. The son of small business owners, Zevin comes from a multi-generational line of entrepreneurs and is a proud first-generation college student. At Oink, he combines his passion for innovation with a mission to expand access to modern financial tools.
-            </p>
+            <div className="social-links">
+              <a href="https://www.linkedin.com/in/zevin-attisha-6772b2277/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Zevin Attisha LinkedIn">
+                <LinkedInIcon />
+              </a>
+            </div>
           </div>
           <div className="team-member">
             <img src="/headshot.jpeg" alt="Thomas Caneday" className="team-photo" />
             <h3>Thomas Caneday</h3>
             <p className="role">CTO</p>
-            <p className="bio">
-              Thomas Caneday is the Chief Technology Officer of Oink, where he oversees the development and execution of the company’s financial technology infrastructure. He holds a Bachelor's degree in Computer Science from the University of San Diego and is currently pursuing a Master of Science in Computer Science at the Georgia Institute of Technology. With a strong foundation in full-stack development, distributed systems, and API architecture, Thomas has led the creation of scalable, secure, and user-centric financial products. At Oink, he drives the company’s technical vision, product strategy, and innovation roadmap.
-            </p>
+            <div className="social-links">
+              <a href="https://www.linkedin.com/in/thomas-caneday-323973259/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Thomas Caneday LinkedIn">
+                <LinkedInIcon />
+              </a>
+            </div>
           </div>
           <div className="team-member">
             <img src="/andre-headshot.jpeg" alt="Andre Suaid" className="team-photo" />
             <h3>Andre Suaid</h3>
             <p className="role">CFO</p>
-            <p className="bio">
-              Andre Suaid is an accomplished trilingual honors student at the University of San Diego, where he was awarded the prestigious $100,000 Alcalá Scholarship in recognition of his academic excellence and leadership. Fluent in English, Spanish, and Portuguese, he brings a global outlook shaped by his experience living across the United States as well as internationally in Brazil and Chile. Andre has been recognized as a finalist in both the Fowler Business Challenge and the USD TECh Competition. He is set to join BNP Paribas in New York as a Sales and Trading Analyst Intern. As Chief Financial Officer at Oink, Andre oversees financial planning, capital strategy, and investment readiness.
-            </p>
+            <div className="social-links">
+              <a href="https://www.linkedin.com/in/andresuaid/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Andre Suaid LinkedIn">
+                <LinkedInIcon />
+              </a>
+            </div>
           </div>
         </div>
       </section>
