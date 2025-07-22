@@ -12,10 +12,17 @@ export default function WaitingListForm() {
     e.preventDefault();
     setStatus("loading");
     try {
-      await addSignup(form);
+      // Clean up the data before sending
+      const formData = {
+        name: form.name.trim(),
+        email: form.email.trim(),
+        ...(form.phone.trim() ? { phone: form.phone.trim() } : {}) // Only include phone if it's not empty
+      };
+      await addSignup(formData);
       setStatus("done");
       setForm({ name: "", email: "", phone: "" });
-    } catch {
+    } catch (error) {
+      console.error('Submission error:', error); // This will help with debugging
       setStatus("error");
     }
   };
@@ -49,7 +56,7 @@ export default function WaitingListForm() {
         type="tel"
         name="phone"
         placeholder="Phone number (optional)"
-        pattern="^\+?[0-9\s\-()]{7,}$"   /* basic validation */
+        pattern="^$|^\+?[0-9\s\-()]{7,}$"   /* allows empty or valid phone number */
         title="Enter a valid phone number"
         value={form.phone}
         onChange={handleChange}
