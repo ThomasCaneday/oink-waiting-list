@@ -17,6 +17,9 @@ export default function App() {
             <img src="/oink_pig_logo_correct_pink.jpeg" alt="Oink logo" className="logo-img" />
             <span className="logo-text">Oink</span>
           </div>
+          <nav className="nav-links">
+            <a href="/how-it-works" className="nav-link">How It Works</a>
+          </nav>
         </div>
       </header>
       <section className="hero">
