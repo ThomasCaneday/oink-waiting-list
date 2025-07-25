@@ -10,7 +10,7 @@ export default function HowItWorks() {
             <span className="logo-text">Oink</span>
           </div>
           <nav className="nav-links">
-            <a href="/" className="nav-link">Home</a>
+            <a href="#/" className="nav-link">Home</a>
           </nav>
         </div>
       </header>
@@ -78,7 +78,7 @@ export default function HowItWorks() {
       <section className="cta-section">
         <h2>Ready to Start Your Crypto Journey?</h2>
         <p>Join hundreds of others already on the Oink waitlist.</p>
-        <a href="/" className="button primary">Back to Waitlist</a>
+        <a href="#/" className="button primary">Back to Waitlist</a>
       </section>
     </div>
   );
