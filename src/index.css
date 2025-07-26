@@ -161,6 +161,132 @@ body {
   line-height: 1.6;
 }
 
+.partners {
+  padding: 6rem 2rem;
+  background: rgba(255, 77, 151, 0.03);
+}
+
+.partners h2 {
+  text-align: center;
+  color: var(--pink-500);
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.partner-item {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 1rem;
+}
+
+.partner-item h3 {
+  color: var(--pink-500);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.partner-item p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.crypto-growth {
+  padding: 6rem 2rem;
+}
+
+.crypto-growth h2 {
+  text-align: center;
+  color: var(--pink-500);
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.growth-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.growth-item {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.growth-item h3 {
+  color: var(--pink-500);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.growth-item p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.5rem;
+}
+
+.growth-item .highlight {
+  color: var(--pink-500);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem;
+}
+
+.growth-item .growth-rate {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.chart-container {
+  height: 200px;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 1rem;
+  position: relative;
+}
+
+.chart-container svg {
+  width: 100%;
+  height: 100%;
+}
+
+.chart-container.btc path {
+  transition: all 0.3s ease;
+}
+
+.chart-container.eth path {
+  transition: all 0.3s ease;
+}
+
+.chart-container.sol path {
+  transition: all 0.3s ease;
+}
+
+.growth-item:hover .chart-container path {
+  stroke-width: 3;
+}
+
+.disclaimer {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .faq {
   padding: 6rem 2rem;
 }

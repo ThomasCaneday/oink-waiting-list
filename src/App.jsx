@@ -1,4 +1,5 @@
 import WaitingListForm from "./WaitingListForm";
+import Header from './components/Header';
 import "./index.css"; // must stay
 
 // LinkedIn Icon SVG component
@@ -11,17 +12,7 @@ const LinkedInIcon = () => (
 export default function App() {
   return (
     <div className="landing-page">
-      <header className="site-header">
-        <div className="header-content">
-          <div className="logo">
-            <img src="/oink_pig_logo_correct_pink.jpeg" alt="Oink logo" className="logo-img" />
-            <span className="logo-text">Oink</span>
-          </div>
-          <nav className="nav-links">
-            <a href="/how-it-works" className="nav-link">How It Works</a>
-          </nav>
-        </div>
-      </header>
+      <Header />
       <section className="hero">
         <div className="hero-content">
           <h1>The future of crypto is almost here. Are you in?</h1>
