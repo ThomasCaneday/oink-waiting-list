@@ -18,7 +18,7 @@ export default function App() {
             <span className="logo-text">Oink</span>
           </div>
           <nav className="nav-links">
-            <a href="#/how-it-works" className="nav-link">How It Works</a>
+            <a href="/how-it-works" className="nav-link">How It Works</a>
           </nav>
         </div>
       </header>
