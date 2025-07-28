@@ -41,7 +41,7 @@ function HowItWorks() {
         <div className="partner-grid">
           <div className="partner-item">
             <h3>Coinbase Integration 💱</h3>
-            <p>We've partnered with Coinbase, America's most trusted cryptocurrency exchange. With over 100M verified users and $130B+ in quarterly trading volume, Coinbase provides institutional-grade security and reliability for all your crypto investments.</p>
+            <p>We're using Coinbase, America's most trusted cryptocurrency exchange. With over 100M verified users and $130B+ in quarterly trading volume, Coinbase provides institutional-grade security and reliability for all your crypto investments.</p>
           </div>
           <div className="partner-item">
             <h3>Plaid Security 🛡️</h3>
