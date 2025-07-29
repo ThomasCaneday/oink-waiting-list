@@ -28,46 +28,49 @@ export default function WaitingListForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      {/* name */}
-      <input
-        className="input-field"
-        name="name"
-        placeholder="Your name"
-        value={form.name}
-        onChange={handleChange}
-        required
-      />
+    <div id="waitlist-form" className="waitlist-form">
+      <h2>Join the Waitlist</h2>
+      <form onSubmit={handleSubmit}>
+        {/* name */}
+        <input
+          className="input-field"
+          name="name"
+          placeholder="Full Name *"
+          value={form.name}
+          onChange={handleChange}
+          required
+        />
 
-      {/* email */}
-      <input
-        className="input-field"
-        type="email"
-        name="email"
-        placeholder="Email address"
-        value={form.email}
-        onChange={handleChange}
-        required
-      />
+        {/* email */}
+        <input
+          className="input-field"
+          type="email"
+          name="email"
+          placeholder="Email Address *"
+          value={form.email}
+          onChange={handleChange}
+          required
+        />
 
-      {/* phone */}
-      <input
-        className="input-field"
-        type="tel"
-        name="phone"
-        placeholder="Phone number (optional)"
-        pattern="^$|^\+?[0-9\s\-()]{7,}$"   /* allows empty or valid phone number */
-        title="Enter a valid phone number"
-        value={form.phone}
-        onChange={handleChange}
-      />
+        {/* phone */}
+        <input
+          className="input-field"
+          type="tel"
+          name="phone"
+          placeholder="Phone Number (optional)"
+          pattern="^$|^\+?[0-9\s\-()]{7,}$"   /* allows empty or valid phone number */
+          title="Enter a valid phone number"
+          value={form.phone}
+          onChange={handleChange}
+        />
 
-      <button disabled={status === "loading"}>
-        {status === "loading" ? "Submitting…" : "Get Early Access"}
-      </button>
+        <button disabled={status === "loading"}>
+          {status === "loading" ? "Submitting…" : "Get Early Access"}
+        </button>
 
-      {status === "done"  && <p className="alert-success">🎉 You're on the list!</p>}
-      {status === "error" && <p className="alert-error">Something went wrong.</p>}
-    </form>
+        {status === "done"  && <p className="alert-success">🎉 You're on the list!</p>}
+        {status === "error" && <p className="alert-error">Something went wrong.</p>}
+      </form>
+    </div>
   );
 }
