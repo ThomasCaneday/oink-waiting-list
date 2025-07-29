@@ -1,5 +1,5 @@
 import WaitingListForm from "./WaitingListForm";
-import "./index.css"; // must stay
+import "./index.css";
 
 // LinkedIn Icon SVG component
 const LinkedInIcon = () => (
@@ -62,7 +62,7 @@ export default function App() {
       <section className="brand-story">
         <h2>Who We Are</h2>
         <p className="mission">
-          We're students and crypto builders lowering the barrier to digital wealth. 
+          We're crypto builders and enthusiasts lowering the barrier to digital wealth. 
           Investing should be simple, stress-free, and built for this generation.
         </p>
         <div className="values-grid">
