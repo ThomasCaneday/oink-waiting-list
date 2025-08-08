@@ -65,7 +65,7 @@ export default function WaitingListForm() {
         />
 
         <button disabled={status === "loading"}>
-          {status === "loading" ? "Submitting…" : "Get Early Access"}
+          {status === "loading" ? "Submitting…" : "Reserve Your Spot"}
         </button>
 
         {status === "done"  && <p className="alert-success">🎉 You're on the list!</p>}
