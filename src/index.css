@@ -477,6 +477,35 @@ p {
   background: var(--black);
 }
 
+.footer-socials {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-socials .social-icon {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  color: var(--pink);
+  background: rgba(255,255,255,0.05);
+  border-radius: 50%;
+  transition: background .2s ease, transform .2s ease, color .2s ease;
+}
+.footer-socials .social-icon:hover {
+  background: var(--pink);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 640px) {
+  .footer-socials .social-icon { width: 40px; height: 40px; }
+}
+
 /* Footer */
 .site-footer {
   padding: 3rem 2rem;
