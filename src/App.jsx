@@ -61,20 +61,30 @@ export default function App() {
       <section className="how-it-works">
         <h2>How It Works</h2>
         <div className="steps-grid">
+          {/* <div className="step">
+            <div className="step-icon">📝</div>
+            <h3>Create Your Account</h3>
+            <p>Sign up in minutes with your name, email, and a secure password. No crypto knowledge needed.</p>
+          </div> */}
+          <div className="step">
+            <div className="step-icon">🏦</div>
+            <h3>Connect Your Bank</h3>
+            <p>Securely link your everyday spending account so Oink can round up your purchases.</p>
+          </div>
+          <div className="step">
+            <div className="step-icon">🔑</div>
+            <h3>Set Up Coinbase</h3>
+            <p>We guide you to create or connect a Coinbase account - this is where your crypto is safely held.</p>
+          </div>
+          <div className="step">
+            <div className="step-icon">⚙️</div>
+            <h3>Choose Your Settings</h3>
+            <p>Select your round-up frequency, your threshold for when to invest, and which cryptocurrency (like Bitcoin or Ethereum) you'd like to buy.</p>
+          </div>
           <div className="step">
             <div className="step-icon">💳</div>
-            <h3>Spend normally</h3>
-            <p>Use your linked card for everyday purchases like coffee, groceries, and more.</p>
-          </div>
-          <div className="step">
-            <div className="step-icon">🔄</div>
-            <h3>We round up</h3>
-            <p>We automatically round up your purchases to the nearest dollar and collect the spare change.</p>
-          </div>
-          <div className="step">
-            <div className="step-icon">📈</div>
-            <h3>Passive crypto</h3>
-            <p>Your spare change is automatically invested into a diversified crypto portfolio.</p>
+            <h3>Spend Normally</h3>
+            <p>Everyday purchases like coffee or groceries get rounded up. Once your spare change adds up to your threshold, Oink automatically invests it for you.</p>
           </div>
         </div>
       </section>
@@ -82,21 +92,22 @@ export default function App() {
       <section className="brand-story">
         <h2>Who We Are</h2>
         <p className="mission">
-          We're crypto builders and enthusiasts lowering the barrier to digital wealth. 
-          Investing should be simple, stress-free, and built for this generation.
+          We're just like you. We were interested in crypto, but didn't know how to get started. 
+          That's why we built Oink - to make investing simple, stress-free, and safe. 
+          Our mission is to lower the barrier to digital wealth for everyone.
         </p>
         <div className="values-grid">
           <div className="value">
-            <h3>Accessibility</h3>
-            <p>Making crypto investing accessible to everyone, regardless of experience.</p>
+            <h3>Simplicity</h3>
+            <p>No fancy jargon - just a clean path to automate responsible investments into crypto.</p>
           </div>
           <div className="value">
-            <h3>Transparency</h3>
-            <p>Clear, honest communication about fees, risks, and how your money works.</p>
+            <h3>Safety</h3>
+            <p>Your money and information are protected through bank-level security and regulated partners.</p>
           </div>
           <div className="value">
-            <h3>Ownership</h3>
-            <p>Your crypto, your keys, your future. We believe in true digital ownership.</p>
+            <h3>Education</h3>
+            <p>We provide short, easy-to-understand explainers so you always know what's happening with your money.</p>
           </div>
         </div>
       </section>
@@ -163,7 +174,7 @@ export default function App() {
           </div>
           <div className="faq-item">
             <h3>How do I get started?</h3>
-            <p>Join our waitlist and you'll be among the first to know when we launch. Once live, simply connect your bank account, customize your round-up preferences, and start investing automatically.</p>
+            <p>Join our waitlist and be the first to know when we launch. Once live, simply connect your bank account, customize your round-up preferences, and start investing automatically.</p>
           </div>
           <div className="faq-item">
             <h3>Can I withdraw my investments anytime?</h3>

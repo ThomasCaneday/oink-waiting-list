@@ -253,8 +253,9 @@ p {
 
 .steps-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  justify-items: center;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -336,7 +337,7 @@ p {
 }
 
 .value:nth-child(1)::before {
-  content: '🔓';
+  content: '✨';
   font-size: 32px;
   display: flex;
   align-items: center;
@@ -344,7 +345,7 @@ p {
 }
 
 .value:nth-child(2)::before {
-  content: '👁️';
+  content: '🔒';
   font-size: 32px;
   display: flex;
   align-items: center;
@@ -352,7 +353,7 @@ p {
 }
 
 .value:nth-child(3)::before {
-  content: '🔑';
+  content: '📚';
   font-size: 32px;
   display: flex;
   align-items: center;
@@ -1294,3 +1295,17 @@ button:disabled{
 }
 .alert-success { color: var(--pink-600); }
 .alert-error   { color: #e11d48; }      /* rose‑700 */
+
+/* Center the last row of 2 steps in the 3-column .steps-grid on desktop */
+@media (min-width: 1025px) {
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .steps-grid > *:nth-child(4):nth-last-child(2) {
+    grid-column: 2;
+  }
+  .steps-grid > *:nth-child(5):nth-last-child(1) {
+    grid-column: 3;
+  }
+}
