@@ -28,6 +28,13 @@ const TikTokIcon = () => (
   </svg>
 );
 
+// TikTok Icon (mono, uses currentColor) for footer
+const TikTokIconMono = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <path d="M13.5 3a6 6 0 0 0 6 6v2.05a8 8 0 0 1-4.2-1.23l-.01 5.18a6 6 0 1 1-6-6c.17 0 .34.01.5.03V12a3.5 3.5 0 1 0 3.01 3.47L12.81 3.5h.69Z"/>
+  </svg>
+);
+
 // YouTube Icon
 const YouTubeIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.8 8s-.2-1.4-.8-2c-.8-.9-1.7-.9-2.1-1C15.9 4.7 12 4.7 12 4.7h0s-3.9 0-6.9.3c-.4.1-1.3.1-2.1 1-.6.6-.8 2-.8 2S2 9.6 2 11.3v1.3c0 1.7.2 3.3.2 3.3s.2 1.4.8 2c.8.9 1.8.8 2.3.9 1.7.2 6.7.3 6.7.3s3.9 0 6.9-.3c.4-.1 1.3-.1 2.1-1 .6-.6.8-2 .8-2s.2-1.7.2-3.3v-1.3C22 9.6 21.8 8 21.8 8ZM10 14.7V9.3l5.2 2.7L10 14.7Z"/></svg>
@@ -217,7 +224,7 @@ export default function App() {
         </div>
         <div className="footer-socials" aria-label="Oink social media links">
           <a href="https://www.instagram.com/oinkcrypto/" target="_blank" rel="noopener noreferrer" aria-label="Oink on Instagram" className="social-icon"><InstagramIcon /></a>
-          <a href="https://www.tiktok.com/@oinkcrypto" target="_blank" rel="noopener noreferrer" aria-label="Oink on TikTok" className="social-icon"><TikTokIcon /></a>
+          <a href="https://www.tiktok.com/@oinkcrypto" target="_blank" rel="noopener noreferrer" aria-label="Oink on TikTok" className="social-icon"><TikTokIconMono /></a>
             <a href="https://www.youtube.com/channel/UCKgSti6686Z0Nu9n41aww0Q" target="_blank" rel="noopener noreferrer" aria-label="Oink on YouTube" className="social-icon"><YouTubeIcon /></a>
           <a href="https://x.com/Oink_wallet" target="_blank" rel="noopener noreferrer" aria-label="Oink on X" className="social-icon"><XIcon /></a>
           <a href="https://www.linkedin.com/company/oinkcrypto/" target="_blank" rel="noopener noreferrer" aria-label="Oink on LinkedIn" className="social-icon"><LinkedInIcon /></a>
