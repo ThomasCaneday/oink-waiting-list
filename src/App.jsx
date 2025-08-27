@@ -13,9 +13,19 @@ const InstagramIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
 );
 
-// TikTok Icon (simplified)
+// TikTok Icon with gradient fill
 const TikTokIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 3a6 6 0 0 0 6 6v2.05a8 8 0 0 1-4.2-1.23l-.01 5.18a6 6 0 1 1-6-6c.17 0 .34.01.5.03V12a3.5 3.5 0 1 0 3.01 3.47L12.81 3.5h.69Z"/></svg>
+  <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="tiktokGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#69C9D0" />
+        <stop offset="45%" stopColor="#69C9D0" />
+        <stop offset="55%" stopColor="#EE1D52" />
+        <stop offset="100%" stopColor="#EE1D52" />
+      </linearGradient>
+    </defs>
+    <path fill="url(#tiktokGradient)" d="M13.5 3a6 6 0 0 0 6 6v2.05a8 8 0 0 1-4.2-1.23l-.01 5.18a6 6 0 1 1-6-6c.17 0 .34.01.5.03V12a3.5 3.5 0 1 0 3.01 3.47L12.81 3.5h.69Z"/>
+  </svg>
 );
 
 // YouTube Icon
@@ -45,6 +55,13 @@ export default function App() {
           <div className="hero-text">
             <h1>Crypto for All.</h1>
             <h2>Oink turns your spare change into crypto automatically.</h2>
+            <div className="hero-socials" aria-label="Oink social media links">
+              <a href="https://www.instagram.com/oinkcrypto/" target="_blank" rel="noopener noreferrer" aria-label="Oink on Instagram" className="social-icon instagram"><InstagramIcon /></a>
+              <a href="https://www.tiktok.com/@oinkcrypto" target="_blank" rel="noopener noreferrer" aria-label="Oink on TikTok" className="social-icon tiktok"><TikTokIcon /></a>
+              <a href="https://www.youtube.com/channel/UCKgSti6686Z0Nu9n41aww0Q" target="_blank" rel="noopener noreferrer" aria-label="Oink on YouTube" className="social-icon youtube"><YouTubeIcon /></a>
+              <a href="https://x.com/Oink_wallet" target="_blank" rel="noopener noreferrer" aria-label="Oink on X" className="social-icon x"><XIcon /></a>
+              <a href="https://www.linkedin.com/company/oinkcrypto/" target="_blank" rel="noopener noreferrer" aria-label="Oink on LinkedIn" className="social-icon linkedin"><LinkedInIcon /></a>
+            </div>
             <div className="cta-buttons">
               <button className="button primary" onClick={() => document.getElementById('waitlist-form').scrollIntoView({ behavior: 'smooth' })}>
                 Join the Waitlist&nbsp;

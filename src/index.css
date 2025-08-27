@@ -609,6 +609,76 @@ p {
   flex-wrap: wrap;
 }
 
+/* Hero Socials */
+.hero-socials {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto 0.5rem;
+}
+.hero-text .hero-socials { justify-content: center; }
+.hero-socials .social-icon {
+  display: inline-flex;
+  width: 56px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  color: #fff; /* icon fill */
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  transition: background .2s ease, transform .2s ease, color .2s ease, box-shadow .2s ease;
+}
+.hero-socials .social-icon svg { width: 30px; height: 30px; }
+
+/* Brand backgrounds with white icons */
+.hero-socials .social-icon.instagram {
+  background: radial-gradient(circle at 30% 107%,
+    #fdf497 0%, #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285AEB 90%);
+  color: #fff;
+  border: none; /* remove subtle white rim on gradient */
+  background-clip: padding-box;
+}
+.hero-socials .social-icon.tiktok { background: #000000; color: #fff; }
+.hero-socials .social-icon.youtube { background: #FF0000; color: #fff; }
+.hero-socials .social-icon.x { background: #000000; color: #fff; }
+.hero-socials .social-icon.linkedin { background: #0A66C2; color: #fff; }
+
+.hero-socials .social-icon:hover { transform: translateY(-2px); }
+
+/* Brand hover glows */
+.hero-socials .social-icon.instagram:hover {
+  box-shadow: 0 8px 24px rgba(214,36,159,0.45), 0 0 0 3px rgba(255,255,255,0.12);
+}
+.hero-socials .social-icon.youtube:hover {
+  box-shadow: 0 8px 24px rgba(255,0,0,0.4), 0 0 0 3px rgba(255,255,255,0.12);
+}
+.hero-socials .social-icon.linkedin:hover {
+  box-shadow: 0 8px 24px rgba(10,102,194,0.4), 0 0 0 3px rgba(255,255,255,0.12);
+}
+.hero-socials .social-icon.x:hover {
+  box-shadow: 0 8px 24px rgba(255,255,255,0.35), 0 0 0 3px rgba(255,255,255,0.12);
+}
+.hero-socials .social-icon.tiktok:hover {
+  box-shadow:
+    0 8px 24px rgba(105,201,208,0.40),
+    0 4px 12px rgba(238,29,82,0.35),
+    0 0 0 3px rgba(255,255,255,0.10);
+}
+
+@media (max-width: 640px) {
+  .hero-socials .social-icon { width: 52px; height: 52px; }
+  .hero-socials .social-icon svg { width: 28px; height: 28px; }
+}
+@media (max-width: 1024px) {
+  .hero-text .hero-socials { justify-content: center; }
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .hero-content {
