@@ -137,8 +137,8 @@ export default function WaitingListForm() {
       {showModal && (
         <div className="modal-overlay" onClick={() => setShowModal(false)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <h2>🎉 You're on the list!</h2>
-            <p>You're now set to turn your spare change into crypto automatically! Share Oink with your friends so they don't miss out on the future of investing.</p>
+            <h2>🎉 You're officially on the Oink list!</h2>
+            <p>You're now closer to turning your spare change into crypto automatically! Share Oink with your friends so they don't miss out on the future of investing.</p>
             <div className="share-buttons">
               <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`} target="_blank" rel="noopener noreferrer" className="share-button">
                 <XIcon />
