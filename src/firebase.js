@@ -22,4 +22,6 @@ const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 export const db    = getFirestore(app);
 export const waitlistRef = collection(db, "waitlist");   // one collection is enough
+export const newWaitlistRef = collection(db, "new_waitlist");   // new collection for new signups
 export const addSignup  = (data) => addDoc(waitlistRef, { ...data, createdAt: serverTimestamp() });
+export const addNewSignup  = (data) => addDoc(newWaitlistRef, { ...data, createdAt: serverTimestamp() });

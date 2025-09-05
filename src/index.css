@@ -1353,18 +1353,92 @@ button:disabled{
   }
 }
 
-/* --------------------------------------------------
-   6. Status messages
---------------------------------------------------*/
-.alert-success,
-.alert-error {
-  text-align: center;
-  font-weight: 600;
-  margin-top: 1rem;
-  font-size: .95rem;
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
 }
-.alert-success { color: var(--pink-600); }
-.alert-error   { color: #e11d48; }      /* rose‑700 */
+
+.modal-content {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  color: var(--black);
+}
+
+.modal-content h2 {
+  color: var(--pink);
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  margin-bottom: 2rem;
+  color: var(--grey-700);
+}
+
+.share-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.share-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--pink);
+  color: var(--white);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.share-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(230, 72, 142, 0.3);
+}
+
+.share-button.copy-link {
+  background: var(--grey-600);
+}
+
+.share-button.copy-link:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.close-button {
+  background: transparent;
+  border: 2px solid var(--pink);
+  color: var(--pink);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.close-button:hover {
+  background: var(--pink);
+  color: var(--white);
+}
 
 /* Center the last row of 2 steps in the 3-column .steps-grid on desktop */
 @media (min-width: 1025px) {
@@ -1378,4 +1452,91 @@ button:disabled{
   .steps-grid > *:nth-child(5):nth-last-child(1) {
     grid-column: 3;
   }
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.modal-content {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  color: var(--black);
+}
+
+.modal-content h2 {
+  color: var(--pink);
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  margin-bottom: 2rem;
+  color: var(--grey-700);
+}
+
+.share-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.share-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--pink);
+  color: var(--white);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.share-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(230, 72, 142, 0.3);
+}
+
+.share-button.copy-link {
+  background: var(--grey-600);
+}
+
+.share-button.copy-link:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.close-button {
+  background: transparent;
+  border: 2px solid var(--pink);
+  color: var(--pink);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.close-button:hover {
+  background: var(--pink);
+  color: var(--white);
 }
