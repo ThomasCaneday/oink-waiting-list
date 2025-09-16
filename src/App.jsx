@@ -71,7 +71,7 @@ export default function App() {
             </div>
             <div className="cta-buttons">
               <button className="button primary" onClick={() => document.getElementById('waitlist-form').scrollIntoView({ behavior: 'smooth' })}>
-                Join the Waitlist&nbsp;
+                Join the Club&nbsp;
                 <svg className="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M1 8h12m0 0L8.5 3.5M13 8l-4.5 4.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
