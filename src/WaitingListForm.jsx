@@ -91,7 +91,7 @@ export default function WaitingListForm() {
           colors={['#f7931a', '#627eea', '#00d4aa', '#ff69b4', '#ffb6c1', '#ffd700', '#ffffff']}
         />
       )}
-      <h2>Join the Waitlist</h2>
+      <h2>Join the Club</h2>
       <form onSubmit={handleSubmit}>
         {/* name */}
         <input
