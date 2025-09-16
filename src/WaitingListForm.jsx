@@ -40,7 +40,7 @@ const XIcon = () => (
 );
 
 export default function WaitingListForm() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", referralName: "" });
   const [status, setStatus] = useState("idle");
   const [showModal, setShowModal] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
@@ -56,11 +56,12 @@ export default function WaitingListForm() {
       const formData = {
         name: form.name.trim(),
         email: form.email.trim(),
-        ...(form.phone.trim() ? { phone: form.phone.trim() } : {}) // Only include phone if it's not empty
+        ...(form.phone.trim() ? { phone: form.phone.trim() } : {}), // Only include phone if it's not empty
+        ...(form.referralName.trim() ? { referralName: form.referralName.trim() } : {}) // Only include referralName if it's not empty
       };
       await addNewSignup(formData);
       setStatus("done");
-      setForm({ name: "", email: "", phone: "" });
+      setForm({ name: "", email: "", phone: "", referralName: "" });
       setShowModal(true);
       setShowConfetti(true);
       // Stop confetti after 5 seconds
@@ -123,6 +124,15 @@ export default function WaitingListForm() {
           pattern="^$|^\+?[0-9\s\-()]{7,}$"   /* allows empty or valid phone number */
           title="Enter a valid phone number"
           value={form.phone}
+          onChange={handleChange}
+        />
+
+        {/* referral name */}
+        <input
+          className="input-field"
+          name="referralName"
+          placeholder="Referral Name (optional)"
+          value={form.referralName}
           onChange={handleChange}
         />
 
